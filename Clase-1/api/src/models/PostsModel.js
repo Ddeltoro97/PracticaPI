@@ -1,7 +1,7 @@
 const {DataTypes} = require("sequelize");
 
 module.exports = (sequelize) =>{
-    sequelize.define("Posts", { //Aqui es donde vamos a definir la estructura de la aplicación
+    sequelize.define("Post", { //Aqui es donde vamos a definir la estructura de la aplicación
         id:{
             type: DataTypes.UUID,
             autoIncrement: true,  

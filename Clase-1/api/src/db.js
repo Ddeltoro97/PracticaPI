@@ -1,4 +1,4 @@
-const {User, Post} = sequelize.models;
+
 const {Sequelize, DataTypes} = require("sequelize");
 require("dotenv").config();
 
@@ -17,6 +17,7 @@ UsersModel(sequelize); //Ejecutamos los modelos con el modelo de sequelize
 PostsModel(sequelize);
 
 //Crear las relaciones
+const {User, Post} = sequelize.models;
 User.hasMany(Post); //Un usuario puede tener muchos post
 Post.belongsTo(User); //Un post pertenece a un solo usuario
 
