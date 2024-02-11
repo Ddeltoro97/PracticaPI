@@ -116,21 +116,21 @@ Controller: Es otra función
 7. Vamos al archivo store, importamos createStore de redux y creamos la store con createStore
 8. vamos al reducer, creamos el estado inicial y el reducer, luego volvemos al store
 9. en createStore metemos reducer
-10. Importamos applyMiddleware y compose de redux e importamos thunkMiddleware de redux-thunk
+10. Importamos applyMiddleware y compose de redux e importamos thunk de redux-thunk
 11. creamos un composeEnhancer  que sea window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-12. A la store le pasamos un segundo parámetro, composeEnhancer(applyMiddleware(thunkMiddleware))
+12. A la store le pasamos un segundo parámetro, composeEnhancer(applyMiddleware(thunk))
 13. Exportamos la store por default
 **Middleware**: Básicamente un traductor entre lenguajes de programación.
 14. Vamos al main e importamos la store, tambien importamos el provider de react-redux
 15. En el HTML el provider tiene que abrazar todo. Ejemplo:
 
-    **Hasta ahora no hemos instalado el browserRouter, deberíamos hacerlo**
+    **Para usar el browser router necesitamos instalar react-router-dom, es un buen momento para hacer esto**
 
-    <Provider>
+    <Provider store={store}>
         <BrowserRouter>
             <App/>
         </BrowserRouter>   
     </Provider>
 
-16. 
+16. Ya con esto hecho eres libre de modularizar tu proyecto y de crear componentes y páginas. Que te vaya muy bien en tus proyectos te quiero mucho
 
